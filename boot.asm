@@ -9,7 +9,7 @@ cleanreg:
   xor cx, cx
 ret
 
-__BL_TITLE: db "Control System 3.1", 0x0a, 0x0d, 0
+__BL_TITLE: db "Control System 1.0", 0x0a, 0x0d, 0
 __nl: db 0x0a, 0x0d, 0
 
 %macro print 1
@@ -28,8 +28,7 @@ __nl: db 0x0a, 0x0d, 0
  pop si
 %endmacro
 
-init_boot_loader:
-  print __BL_TITLE
+init_boot_loader:  
   pusha
      mov ah, 0x02
      mov dl, 0 ;drive
@@ -52,6 +51,7 @@ dw 0xAA55
 __core times 256 db 0 ;core buffer
 
 init_run_loader:
+  print __BL_TITLE
 
 boot_loader_main:
 
