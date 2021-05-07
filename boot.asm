@@ -1,6 +1,8 @@
 bits 16
 org 0x7C00
 
+; x86 16 bit boot loader
+
 jmp init_boot_loader
 
 cleanreg:
