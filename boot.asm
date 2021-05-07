@@ -60,4 +60,4 @@ boot_loader_main:
 jmp $
 
 jump_out:
-times (512*32)-($-$$) db 0
+times (512*33)-($-$$) db 0
